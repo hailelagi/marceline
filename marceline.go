@@ -42,7 +42,7 @@ func (r Relation) String() string {
 
 func main() {
 	r := Relation{
-		colNames: []string{"hi", "hello", "world"},
+		colNames: []string{"hi", "hello", "world", "speed"},
 		rows: []Row{
 			{"go", "is", "fast", "faster"},
 			{"rust", "is", "slow", "slow"},
@@ -57,4 +57,10 @@ func main() {
 
 	fmt.Println("equals selection")
 	fmt.Println(EqualSelect(r, 2, 3))
+
+	fmt.Println("projection")
+	fmt.Println(Projection(r, 2, 3))
+
+	fmt.Println("projection")
+	fmt.Println(Join(r, 2, 3))
 }

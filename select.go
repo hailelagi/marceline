@@ -33,3 +33,11 @@ func EqualSelect(relation Relation, x, y int) Relation {
 		rows:     result,
 	}
 }
+
+func Projection(relation Relation, x, y int) Relation {
+	return Relation{}
+}
+
+func Join(relation Relation, x, y int) Relation {
+	return Relation{}
+}
