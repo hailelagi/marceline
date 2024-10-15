@@ -18,3 +18,18 @@ func ConstantSelect(relation Relation, idx int, expr string) Relation {
 		rows:     result,
 	}
 }
+
+func EqualSelect(relation Relation, x, y int) Relation {
+	result := make([]Row, 0)
+
+	for _, row := range relation.rows {
+		if row[x] == row[y] {
+			result = append(result, row)
+		}
+	}
+
+	return Relation{
+		colNames: relation.colNames,
+		rows:     result,
+	}
+}

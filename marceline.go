@@ -44,13 +44,17 @@ func main() {
 	r := Relation{
 		colNames: []string{"hi", "hello", "world"},
 		rows: []Row{
-			{"go", "is", "fast"},
-			{"rust", "is", "slow"},
-			{"c", "has", "runtime"},
+			{"go", "is", "fast", "faster"},
+			{"rust", "is", "slow", "slow"},
+			{"c", "has", "runtime", "no really!"},
 		},
 	}
 
 	fmt.Println(r)
 
+	fmt.Println("constant selection")
 	fmt.Println(ConstantSelect(r, 2, "fast"))
+
+	fmt.Println("equals selection")
+	fmt.Println(EqualSelect(r, 2, 3))
 }
