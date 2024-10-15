@@ -51,4 +51,6 @@ func main() {
 	}
 
 	fmt.Println(r)
+
+	fmt.Println(ConstantSelect(r, 2, "fast"))
 }
