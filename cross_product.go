@@ -2,6 +2,7 @@ package main
 
 // Product takes in two relations and outputs a relation that contains all possible combinations for tuples
 // from the input relations. : (R × S)
+// SQL: SELECT * FROM R, S
 func Cross(relOne, relTwo Relation) Relation {
 	result := make([]Row, 0)
 

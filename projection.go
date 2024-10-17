@@ -1,9 +1,8 @@
 package main
 
-// Projection
-//
-//	 modification(r/w/order) over columns, changes the shape of output/attributes
-//		πA1,A2,. . . ,An(R).
+// Projection: modification(r/w/order) over columns, changes the shape of output/attributes
+// π(a1,a2),. . . , (a)n(R).
+// SQL: SELECT b_id-100, a_id FROM R WHERE a_id = 'a2'
 func Projection(relation Relation, columns []int) Relation {
 	result := make([]Row, 0)
 

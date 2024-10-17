@@ -1,8 +1,10 @@
 package main
 
 // selection table/relation + predicate (expr = true | false | unknown)
+// σ predicate(R).
 // 1. constant
 // 2. equality selection
+// SQL: SELECT * FROM R WHERE a_id = 'a2'
 
 func ConstantSelect(relation Relation, idx int, expr string) Relation {
 	result := make([]Row, 0)

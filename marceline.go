@@ -11,8 +11,6 @@ type Row []string
 schema col -> row mapping
 [{k,v}, {k,v}, {k,v}, {k,v}]
 */
-
-// how do you map columns to rows?
 type Relation struct {
 	colNames []string
 	rows     []Row
