@@ -7,6 +7,12 @@ import (
 
 type Row []string
 
+/*
+schema col -> row mapping
+[{k,v}, {k,v}, {k,v}, {k,v}]
+*/
+
+// how do you map columns to rows?
 type Relation struct {
 	colNames []string
 	rows     []Row
@@ -59,8 +65,5 @@ func main() {
 	fmt.Println(EqualSelect(r, 2, 3))
 
 	fmt.Println("projection")
-	fmt.Println(Projection(r, 2, 3))
-
-	fmt.Println("projection")
-	fmt.Println(Join(r, 2, 3))
+	fmt.Println(Projection(r, []int{1, 2}))
 }
